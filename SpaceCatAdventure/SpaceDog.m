@@ -32,7 +32,7 @@
     }
     
  
-    float scale = [Util randomWithMin:85 max:150] / 100.0f;
+   float scale = [Util randomWithMin:100 max:150] / 100.0f;
     
     spaceDog.yScale = 5*scale;
     spaceDog.xScale = 1.4*scale;

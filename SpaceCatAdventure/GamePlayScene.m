@@ -65,7 +65,7 @@
     NSUInteger randomSpaceDog = [Util randomWithMin:0 max:2];
     
     SpaceDog* spaceDog = [SpaceDog spaceDogOfType:randomSpaceDog];
-    float dy = [Util randomWithMin: SpaceDogMinSpeed max: SpaceDogMaxSpeed];
+    float dy = [Util randomWithMin: SpaceDogMaxSpeed max: SpaceDogMinSpeed];
     
     spaceDog.physicsBody.velocity = CGVectorMake(0, dy);
 
