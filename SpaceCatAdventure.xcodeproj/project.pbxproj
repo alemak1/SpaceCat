@@ -31,6 +31,10 @@
 		BD5A6CDC1E4DBFAC00ACDB87 /* Ground.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ground.h; sourceTree = "<group>"; };
 		BD5A6CDD1E4DC00800ACDB87 /* Ground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ground.m; sourceTree = "<group>"; };
 		BD5A6CDF1E4DD8EC00ACDB87 /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
+		BD5A6CE21E4DF3DD00ACDB87 /* Damage.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Damage.caf; sourceTree = "<group>"; };
+		BD5A6CE31E4DF3DD00ACDB87 /* Explode.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Explode.caf; sourceTree = "<group>"; };
+		BD5A6CE41E4DF3DD00ACDB87 /* Laser.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Laser.caf; sourceTree = "<group>"; };
+		BD5A6CE51E4DF3DD00ACDB87 /* PressStart.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PressStart.caf; sourceTree = "<group>"; };
 		BD78CF231E4D702F00D7CB3F /* GamePlayScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamePlayScene.m; sourceTree = "<group>"; };
 		BD78CF251E4D705E00D7CB3F /* GamePlayScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GamePlayScene.h; sourceTree = "<group>"; };
 		BD78CF2A1E4D7C3400D7CB3F /* Sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Sprites.atlas; sourceTree = "<group>"; };
@@ -71,6 +75,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD5A6CE11E4DF3B600ACDB87 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				BD5A6CE21E4DF3DD00ACDB87 /* Damage.caf */,
+				BD5A6CE31E4DF3DD00ACDB87 /* Explode.caf */,
+				BD5A6CE41E4DF3DD00ACDB87 /* Laser.caf */,
+				BD5A6CE51E4DF3DD00ACDB87 /* PressStart.caf */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
 		BDE039D01E4CBF4400EF037D = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +105,7 @@
 		BDE039DB1E4CBF4400EF037D /* SpaceCatAdventure */ = {
 			isa = PBXGroup;
 			children = (
+				BD5A6CE11E4DF3B600ACDB87 /* Sounds */,
 				BD78CF2A1E4D7C3400D7CB3F /* Sprites.atlas */,
 				BDE03A001E4CC48200EF037D /* TitleScene.h */,
 				BDE03A011E4CCBD000EF037D /* TitleScene.sks */,
