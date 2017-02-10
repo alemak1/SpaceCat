@@ -65,6 +65,10 @@
     NSUInteger randomSpaceDog = [Util randomWithMin:0 max:2];
     
     SpaceDog* spaceDog = [SpaceDog spaceDogOfType:randomSpaceDog];
+    float dy = [Util randomWithMin: SpaceDogMinSpeed max: SpaceDogMaxSpeed];
+    
+    spaceDog.physicsBody.velocity = CGVectorMake(0, dy);
+
     float y = self.frame.size.height + spaceDog.size.height;
     float x = [Util randomWithMin:10+spaceDog.size.width
                               max:self.frame.size.width-spaceDog.size.width-10];

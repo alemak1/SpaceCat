@@ -31,9 +31,13 @@
                      [SKTexture textureWithImageNamed:@"spacedog_B_3"]];
     }
     
-    spaceDog.yScale = 5;
-    spaceDog.xScale = 1.4;
+ 
+    float scale = [Util randomWithMin:85 max:150] / 100.0f;
     
+    spaceDog.yScale = 5*scale;
+    spaceDog.xScale = 1.4*scale;
+    
+   
     SKAction * animation = [SKAction animateWithTextures:textures timePerFrame:0.10];
     [spaceDog runAction:[SKAction repeatActionForever:animation]];
     
@@ -46,7 +50,6 @@
 - (void) setupPhysicsBody{
     self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.frame.size];
     self.physicsBody.affectedByGravity = NO;
-    self.physicsBody.velocity = CGVectorMake(0, -180);
     
     self.physicsBody.categoryBitMask = CollisionCategoryEnemy;
     self.physicsBody.collisionBitMask = 0;
