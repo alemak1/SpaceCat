@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Projectile.h"
-#import "Constants.h"
+#import "Util"
 
 @implementation Projectile
 
