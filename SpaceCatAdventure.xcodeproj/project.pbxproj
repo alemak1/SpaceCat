@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD5A6CDE1E4DC00800ACDB87 /* Ground.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5A6CDD1E4DC00800ACDB87 /* Ground.m */; };
 		BD78CF241E4D702F00D7CB3F /* GamePlayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BD78CF231E4D702F00D7CB3F /* GamePlayScene.m */; };
 		BD78CF2B1E4D7C3400D7CB3F /* Sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BD78CF2A1E4D7C3400D7CB3F /* Sprites.atlas */; };
 		BD78CF2D1E4D81FD00D7CB3F /* MachineNode.m in Sources */ = {isa = PBXBuildFile; fileRef = BD78CF2C1E4D81FD00D7CB3F /* MachineNode.m */; };
@@ -26,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD5A6CDC1E4DBFAC00ACDB87 /* Ground.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ground.h; sourceTree = "<group>"; };
+		BD5A6CDD1E4DC00800ACDB87 /* Ground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ground.m; sourceTree = "<group>"; };
 		BD78CF231E4D702F00D7CB3F /* GamePlayScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamePlayScene.m; sourceTree = "<group>"; };
 		BD78CF251E4D705E00D7CB3F /* GamePlayScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GamePlayScene.h; sourceTree = "<group>"; };
 		BD78CF2A1E4D7C3400D7CB3F /* Sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Sprites.atlas; sourceTree = "<group>"; };
@@ -91,6 +94,8 @@
 				BDE039FE1E4CC45400EF037D /* TitleScene.m */,
 				BD78CF251E4D705E00D7CB3F /* GamePlayScene.h */,
 				BD78CF231E4D702F00D7CB3F /* GamePlayScene.m */,
+				BD5A6CDC1E4DBFAC00ACDB87 /* Ground.h */,
+				BD5A6CDD1E4DC00800ACDB87 /* Ground.m */,
 				BD78CF361E4DA8A000D7CB3F /* Util.h */,
 				BD78CF371E4DAC7100D7CB3F /* SpaceDog.h */,
 				BD78CF381E4DACA100D7CB3F /* SpaceDog.m */,
@@ -204,6 +209,7 @@
 				BDE039E11E4CBF4400EF037D /* AppDelegate.m in Sources */,
 				BD78CF241E4D702F00D7CB3F /* GamePlayScene.m in Sources */,
 				BDE039DE1E4CBF4400EF037D /* main.m in Sources */,
+				BD5A6CDE1E4DC00800ACDB87 /* Ground.m in Sources */,
 				BDE039FF1E4CC45400EF037D /* TitleScene.m in Sources */,
 				BD78CF391E4DACA200D7CB3F /* SpaceDog.m in Sources */,
 				BD78CF2D1E4D81FD00D7CB3F /* MachineNode.m in Sources */,
