@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Projectile.h"
-#import "Util"
+#import "Util.h"
 
 @implementation Projectile
 
@@ -66,9 +66,15 @@
     
     float time = distanceC / PROJECTILE_SPEED;
     
+    SKAction * pauseAction = [SKAction waitForDuration:time*.50];
+    SKAction * fadeOutAction = [SKAction fadeOutWithDuration:time*.60];
+    SKAction * actionSequence = [SKAction sequence:@[pauseAction, fadeOutAction]];
     
     SKAction* moveProjectile = [SKAction moveTo:pointOffScreen duration:time];
-    [self runAction: moveProjectile];
+    
+    SKAction* actionGroup = [SKAction group:@[moveProjectile, actionSequence]];
+    
+    [self runAction: actionGroup];
     
 }
 
