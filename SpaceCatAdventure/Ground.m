@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Ground.h"
+#import "Util.h"
 
 @implementation Ground
 
@@ -23,6 +24,9 @@
     self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.frame.size];
     self.physicsBody.affectedByGravity = NO;
     self.physicsBody.dynamic = NO;
+    self.physicsBody.categoryBitMask = CollisionCategoryGround;
+    self.physicsBody.collisionBitMask = CollisionCategoryDebris;
+    self.physicsBody.contactTestBitMask = CollisionCategoryEnemy;
 
 }
 

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <SpriteKit/SpriteKit.h>
 #import "SpaceDog.h"
-
+#import "Util.h"
 
 @implementation SpaceDog
 
@@ -47,6 +47,10 @@
     self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.frame.size];
     self.physicsBody.affectedByGravity = NO;
     self.physicsBody.velocity = CGVectorMake(0, -50);
+    
+    self.physicsBody.categoryBitMask = CollisionCategoryEnemy;
+    self.physicsBody.collisionBitMask = 0;
+    self.physicsBody.contactTestBitMask = CollisionCategoryProjectile | CollisionCategoryGround;
 }
 
 
