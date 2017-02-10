@@ -15,6 +15,7 @@
     SpaceCat* spaceCat = [self spriteNodeWithImageNamed:@"spacecat_1"];
     spaceCat.yScale = 4;
     spaceCat.xScale = 1.4;
+    spaceCat.anchorPoint = CGPointMake(0.5, 0);
     spaceCat.position = position;
     
     SKAction* spaceCatAction = [SKAction animateWithTextures: @[
