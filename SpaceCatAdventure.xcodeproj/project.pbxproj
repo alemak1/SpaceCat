@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		BD5A6CDE1E4DC00800ACDB87 /* Ground.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5A6CDD1E4DC00800ACDB87 /* Ground.m */; };
 		BD5A6CE01E4DD8EC00ACDB87 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5A6CDF1E4DD8EC00ACDB87 /* Util.m */; };
+		BD5A6CEA1E4DF48500ACDB87 /* Damage.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD5A6CE61E4DF48500ACDB87 /* Damage.caf */; };
+		BD5A6CEB1E4DF48500ACDB87 /* Explode.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD5A6CE71E4DF48500ACDB87 /* Explode.caf */; };
+		BD5A6CEC1E4DF48500ACDB87 /* Laser.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD5A6CE81E4DF48500ACDB87 /* Laser.caf */; };
+		BD5A6CED1E4DF48500ACDB87 /* PressStart.caf in Resources */ = {isa = PBXBuildFile; fileRef = BD5A6CE91E4DF48500ACDB87 /* PressStart.caf */; };
 		BD78CF241E4D702F00D7CB3F /* GamePlayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BD78CF231E4D702F00D7CB3F /* GamePlayScene.m */; };
 		BD78CF2B1E4D7C3400D7CB3F /* Sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BD78CF2A1E4D7C3400D7CB3F /* Sprites.atlas */; };
 		BD78CF2D1E4D81FD00D7CB3F /* MachineNode.m in Sources */ = {isa = PBXBuildFile; fileRef = BD78CF2C1E4D81FD00D7CB3F /* MachineNode.m */; };
@@ -31,10 +35,10 @@
 		BD5A6CDC1E4DBFAC00ACDB87 /* Ground.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ground.h; sourceTree = "<group>"; };
 		BD5A6CDD1E4DC00800ACDB87 /* Ground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ground.m; sourceTree = "<group>"; };
 		BD5A6CDF1E4DD8EC00ACDB87 /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
-		BD5A6CE21E4DF3DD00ACDB87 /* Damage.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Damage.caf; sourceTree = "<group>"; };
-		BD5A6CE31E4DF3DD00ACDB87 /* Explode.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Explode.caf; sourceTree = "<group>"; };
-		BD5A6CE41E4DF3DD00ACDB87 /* Laser.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Laser.caf; sourceTree = "<group>"; };
-		BD5A6CE51E4DF3DD00ACDB87 /* PressStart.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PressStart.caf; sourceTree = "<group>"; };
+		BD5A6CE61E4DF48500ACDB87 /* Damage.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Damage.caf; sourceTree = "<group>"; };
+		BD5A6CE71E4DF48500ACDB87 /* Explode.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Explode.caf; sourceTree = "<group>"; };
+		BD5A6CE81E4DF48500ACDB87 /* Laser.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Laser.caf; sourceTree = "<group>"; };
+		BD5A6CE91E4DF48500ACDB87 /* PressStart.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PressStart.caf; sourceTree = "<group>"; };
 		BD78CF231E4D702F00D7CB3F /* GamePlayScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamePlayScene.m; sourceTree = "<group>"; };
 		BD78CF251E4D705E00D7CB3F /* GamePlayScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GamePlayScene.h; sourceTree = "<group>"; };
 		BD78CF2A1E4D7C3400D7CB3F /* Sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Sprites.atlas; sourceTree = "<group>"; };
@@ -78,10 +82,10 @@
 		BD5A6CE11E4DF3B600ACDB87 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				BD5A6CE21E4DF3DD00ACDB87 /* Damage.caf */,
-				BD5A6CE31E4DF3DD00ACDB87 /* Explode.caf */,
-				BD5A6CE41E4DF3DD00ACDB87 /* Laser.caf */,
-				BD5A6CE51E4DF3DD00ACDB87 /* PressStart.caf */,
+				BD5A6CE61E4DF48500ACDB87 /* Damage.caf */,
+				BD5A6CE71E4DF48500ACDB87 /* Explode.caf */,
+				BD5A6CE81E4DF48500ACDB87 /* Laser.caf */,
+				BD5A6CE91E4DF48500ACDB87 /* PressStart.caf */,
 			);
 			name = Sounds;
 			sourceTree = "<group>";
@@ -206,8 +210,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDE039EE1E4CBF4400EF037D /* Main.storyboard in Resources */,
+				BD5A6CEB1E4DF48500ACDB87 /* Explode.caf in Resources */,
+				BD5A6CEA1E4DF48500ACDB87 /* Damage.caf in Resources */,
 				BD78CF2B1E4D7C3400D7CB3F /* Sprites.atlas in Resources */,
+				BD5A6CEC1E4DF48500ACDB87 /* Laser.caf in Resources */,
 				BDE039E31E4CBF4400EF037D /* GameScene.sks in Resources */,
+				BD5A6CED1E4DF48500ACDB87 /* PressStart.caf in Resources */,
 				BDE039F01E4CBF4400EF037D /* Assets.xcassets in Resources */,
 				BDE03A021E4CCBD000EF037D /* TitleScene.sks in Resources */,
 				BDE039F31E4CBF4400EF037D /* LaunchScreen.storyboard in Resources */,

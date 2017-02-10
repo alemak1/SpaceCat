@@ -26,6 +26,11 @@
 @property (nonatomic) NSInteger minSpeed;
 @property (nonatomic) NSTimeInterval addEnemyTimeInterval;
 
+
+@property (nonatomic) SKAction* damageSFX;
+@property (nonatomic) SKAction* explodeSFX;
+@property (nonatomic) SKAction* laserSFX;
+
 @end
 
 
@@ -63,9 +68,19 @@
     Ground* ground = [Ground groundWithSize:CGSizeMake(self.frame.size.width, 22)];
     [self addChild:ground];
     
+    [self setUpSounds];
+    
 }
 
 
+- (void) setUpSounds{
+    self.damageSFX = [SKAction playSoundFileNamed:@"Damage.caf" waitForCompletion:NO];
+    self.explodeSFX = [SKAction playSoundFileNamed:@"Explode.caf" waitForCompletion:NO];
+    self.laserSFX = [SKAction playSoundFileNamed:@"Laser.caf" waitForCompletion:NO];
+
+
+
+}
 
 - (void) addSpaceDog{
     NSUInteger randomSpaceDog = [Util randomWithMin:0 max:2];
@@ -126,6 +141,8 @@
     Projectile* projectile = [Projectile projectileAtPosition:CGPointMake(machine.position.x, machine.position.y + machine.frame.size.height-15)];
     [self addChild:projectile];
     [projectile moveTowardsPosition:position];
+    
+    [self runAction:self.laserSFX];
 }
 
 -(void)update:(CFTimeInterval)currentTime {
@@ -166,7 +183,10 @@
     if(contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask){
         firstBody = contact.bodyA;
         secondBody = contact.bodyB;
+        
+        
     } else {
+        
         firstBody = contact.bodyB;
         secondBody = contact.bodyA;
     }
@@ -179,6 +199,8 @@
         
         [spaceDog removeFromParent];
         [projectile removeFromParent];
+        [self runAction:self.explodeSFX];
+
         
     } else if (firstBody.categoryBitMask == CollisionCategoryEnemy && secondBody.categoryBitMask == CollisionCategoryGround){
         NSLog(@"Hit ground");
@@ -186,6 +208,7 @@
         SpaceDog* spaceDog = (SpaceDog*) firstBody.node;
         
         [spaceDog removeFromParent];
+        [self runAction:self.damageSFX];
     }
     
     [self createDebrisAtPosition: contact.contactPoint];

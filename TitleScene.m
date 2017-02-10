@@ -12,6 +12,11 @@
 #import "TitleScene.h"
 #import "GamePlayScene.h"
 
+@interface TitleScene ()
+
+@property (nonatomic) SKAction* pressStartSFX;
+@end
+
 @implementation TitleScene
 
 - (void) didMoveToView:(SKView *)view{
@@ -22,7 +27,8 @@
     
     [self addChild: background];
     
-
+    
+    self.pressStartSFX = [SKAction playSoundFileNamed:@"PressStart.caf" waitForCompletion:NO];
     
 
 }
@@ -57,6 +63,8 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     // Run 'Pulse' action from 'Actions.sks'
     //SKScene* gamePlayScene = [GamePlayScene nodeWithFileNamed:@"THGamePlayScene.sks"];
+    [self runAction:self.pressStartSFX];
+    
     SKScene* gamePlayScene = [[GamePlayScene alloc] initWithSize:self.size];
     SKTransition *transition = [SKTransition fadeWithDuration:1.0];
     [self.view presentScene:gamePlayScene transition: transition];
