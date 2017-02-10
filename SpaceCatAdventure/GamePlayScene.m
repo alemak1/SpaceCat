@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import <SpriteKit/SpriteKit.h>
 #import "GamePlayScene.h"
 #import "MachineNode.h"
 #import "SpaceCat.h"
+#import "Projectile.h"
 
 @implementation GamePlayScene
 
@@ -55,8 +57,11 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     // Run 'Pulse' action from 'Actions.sks'
    
-    SpaceCat* spaceCat = (SpaceCat*)[self childNodeWithName:@"SpaceCat"];
-    [spaceCat performTap];
+    for (UITouch* touch in touches) {
+        CGPoint position = [touch locationInNode:self];
+        [self shootProjectileTowardsPosition: position];
+    }
+
     
     //    for (UITouch *t in touches) {[self touchDownAtPoint:[t locationInNode:self]];}
 }
@@ -70,6 +75,13 @@
     for (UITouch *t in touches) {[self touchUpAtPoint:[t locationInNode:self]];}
 }
 
+- (void) shootProjectileTowardsPosition: (CGPoint)position{
+    SpaceCat* spaceCat = (SpaceCat*)[self childNodeWithName:@"SpaceCat"];
+    [spaceCat performTap];
+    
+    Projectile* projectile = [Projectile projectileAtPosition:position];
+    [self addChild:projectile];
+}
 
 -(void)update:(CFTimeInterval)currentTime {
     // Called before each frame is rendered
