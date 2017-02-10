@@ -13,6 +13,7 @@
 #import "MachineNode.h"
 #import "SpaceCat.h"
 #import "Projectile.h"
+#import "SpaceDog.h"
 
 @implementation GamePlayScene
 
@@ -35,11 +36,21 @@
     
     [self addChild: spaceCat];
 
+    [self addSpaceDog];
     
 }
 
 
 
+- (void) addSpaceDog{
+    SpaceDog* spaceDogA = [SpaceDog spaceDogOfType:SpaceDogTypeA];
+    spaceDogA.position = CGPointMake(100, 100);
+    [self addChild: spaceDogA];
+    
+    SpaceDog* spaceDogB = [SpaceDog spaceDogOfType:SpaceDogTypeB];
+    spaceDogB.position = CGPointMake(200, 200);
+    [self addChild:spaceDogB];
+}
 
 
 - (void)touchDownAtPoint:(CGPoint)pos {

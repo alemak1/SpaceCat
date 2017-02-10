@@ -14,6 +14,8 @@
 
 + (instancetype) spaceDogOfType: (SpaceDogType)type{
     SpaceDog* spaceDog;
+    spaceDog.yScale = 4;
+    spaceDog.xScale = 1.4;
     
     if(type == SpaceDogTypeA){
         spaceDog = [self spriteNodeWithImageNamed:@"spacedog_A_1"];
