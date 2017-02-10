@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <SpriteKit/SpriteKit.h>
 
-#import "THTitleScene.h"
+#import "TitleScene.h"
+#import "GamePlayScene.h"
 
 @implementation TitleScene
 
@@ -55,8 +56,11 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     // Run 'Pulse' action from 'Actions.sks'
+    //SKScene* gamePlayScene = [GamePlayScene nodeWithFileNamed:@"THGamePlayScene.sks"];
+    SKScene* gamePlayScene = [[GamePlayScene alloc] initWithSize:self.size];
+    SKTransition *transition = [SKTransition fadeWithDuration:1.0];
+    [self.view presentScene:gamePlayScene transition: transition];
     
-    for (UITouch *t in touches) {[self touchDownAtPoint:[t locationInNode:self]];}
 }
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
     for (UITouch *t in touches) {[self touchMovedToPoint:[t locationInNode:self]];}

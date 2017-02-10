@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD78CF241E4D702F00D7CB3F /* GamePlayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BD78CF231E4D702F00D7CB3F /* GamePlayScene.m */; };
 		BDE039DE1E4CBF4400EF037D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE039DD1E4CBF4400EF037D /* main.m */; };
 		BDE039E11E4CBF4400EF037D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE039E01E4CBF4400EF037D /* AppDelegate.m */; };
 		BDE039E31E4CBF4400EF037D /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = BDE039E21E4CBF4400EF037D /* GameScene.sks */; };
@@ -15,11 +16,13 @@
 		BDE039EE1E4CBF4400EF037D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE039EC1E4CBF4400EF037D /* Main.storyboard */; };
 		BDE039F01E4CBF4400EF037D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDE039EF1E4CBF4400EF037D /* Assets.xcassets */; };
 		BDE039F31E4CBF4400EF037D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE039F11E4CBF4400EF037D /* LaunchScreen.storyboard */; };
-		BDE039FF1E4CC45400EF037D /* THTitleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE039FE1E4CC45400EF037D /* THTitleScene.m */; };
-		BDE03A021E4CCBD000EF037D /* THTitleScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = BDE03A011E4CCBD000EF037D /* THTitleScene.sks */; };
+		BDE039FF1E4CC45400EF037D /* TitleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE039FE1E4CC45400EF037D /* TitleScene.m */; };
+		BDE03A021E4CCBD000EF037D /* TitleScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = BDE03A011E4CCBD000EF037D /* TitleScene.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD78CF231E4D702F00D7CB3F /* GamePlayScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamePlayScene.m; sourceTree = "<group>"; };
+		BD78CF251E4D705E00D7CB3F /* GamePlayScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GamePlayScene.h; sourceTree = "<group>"; };
 		BDE039D91E4CBF4400EF037D /* SpaceCatAdventure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceCatAdventure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDE039DD1E4CBF4400EF037D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BDE039DF1E4CBF4400EF037D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -32,9 +35,9 @@
 		BDE039EF1E4CBF4400EF037D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDE039F21E4CBF4400EF037D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDE039F41E4CBF4400EF037D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BDE039FE1E4CC45400EF037D /* THTitleScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THTitleScene.m; sourceTree = "<group>"; };
-		BDE03A001E4CC48200EF037D /* THTitleScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = THTitleScene.h; path = SpaceCatAdventure/THTitleScene.h; sourceTree = "<group>"; };
-		BDE03A011E4CCBD000EF037D /* THTitleScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = THTitleScene.sks; sourceTree = "<group>"; };
+		BDE039FE1E4CC45400EF037D /* TitleScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TitleScene.m; path = ../TitleScene.m; sourceTree = "<group>"; };
+		BDE03A001E4CC48200EF037D /* TitleScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TitleScene.h; sourceTree = "<group>"; };
+		BDE03A011E4CCBD000EF037D /* TitleScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = TitleScene.sks; path = ../TitleScene.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +54,6 @@
 		BDE039D01E4CBF4400EF037D = {
 			isa = PBXGroup;
 			children = (
-				BDE03A001E4CC48200EF037D /* THTitleScene.h */,
-				BDE03A011E4CCBD000EF037D /* THTitleScene.sks */,
-				BDE039FE1E4CC45400EF037D /* THTitleScene.m */,
 				BDE039DB1E4CBF4400EF037D /* SpaceCatAdventure */,
 				BDE039DA1E4CBF4400EF037D /* Products */,
 			);
@@ -70,13 +70,15 @@
 		BDE039DB1E4CBF4400EF037D /* SpaceCatAdventure */ = {
 			isa = PBXGroup;
 			children = (
-				BDE039DF1E4CBF4400EF037D /* AppDelegate.h */,
-				BDE039E01E4CBF4400EF037D /* AppDelegate.m */,
+				BDE03A001E4CC48200EF037D /* TitleScene.h */,
+				BDE03A011E4CCBD000EF037D /* TitleScene.sks */,
+				BDE039FE1E4CC45400EF037D /* TitleScene.m */,
+				BD78CF251E4D705E00D7CB3F /* GamePlayScene.h */,
+				BD78CF231E4D702F00D7CB3F /* GamePlayScene.m */,
 				BDE039E21E4CBF4400EF037D /* GameScene.sks */,
 				BDE039E41E4CBF4400EF037D /* Actions.sks */,
-				BDE039E91E4CBF4400EF037D /* GameViewController.h */,
-				BDE039EA1E4CBF4400EF037D /* GameViewController.m */,
 				BDE039EC1E4CBF4400EF037D /* Main.storyboard */,
+				BDE039DD1E4CBF4400EF037D /* main.m */,
 				BDE039EF1E4CBF4400EF037D /* Assets.xcassets */,
 				BDE039F11E4CBF4400EF037D /* LaunchScreen.storyboard */,
 				BDE039F41E4CBF4400EF037D /* Info.plist */,
@@ -88,7 +90,10 @@
 		BDE039DC1E4CBF4400EF037D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BDE039DD1E4CBF4400EF037D /* main.m */,
+				BDE039E91E4CBF4400EF037D /* GameViewController.h */,
+				BDE039EA1E4CBF4400EF037D /* GameViewController.m */,
+				BDE039DF1E4CBF4400EF037D /* AppDelegate.h */,
+				BDE039E01E4CBF4400EF037D /* AppDelegate.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -154,7 +159,7 @@
 				BDE039EE1E4CBF4400EF037D /* Main.storyboard in Resources */,
 				BDE039E31E4CBF4400EF037D /* GameScene.sks in Resources */,
 				BDE039F01E4CBF4400EF037D /* Assets.xcassets in Resources */,
-				BDE03A021E4CCBD000EF037D /* THTitleScene.sks in Resources */,
+				BDE03A021E4CCBD000EF037D /* TitleScene.sks in Resources */,
 				BDE039F31E4CBF4400EF037D /* LaunchScreen.storyboard in Resources */,
 				BDE039E51E4CBF4400EF037D /* Actions.sks in Resources */,
 			);
@@ -169,8 +174,9 @@
 			files = (
 				BDE039EB1E4CBF4400EF037D /* GameViewController.m in Sources */,
 				BDE039E11E4CBF4400EF037D /* AppDelegate.m in Sources */,
+				BD78CF241E4D702F00D7CB3F /* GamePlayScene.m in Sources */,
 				BDE039DE1E4CBF4400EF037D /* main.m in Sources */,
-				BDE039FF1E4CC45400EF037D /* THTitleScene.m in Sources */,
+				BDE039FF1E4CC45400EF037D /* TitleScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +333,7 @@
 				BDE039F91E4CBF4400EF037D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

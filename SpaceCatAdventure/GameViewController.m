@@ -7,7 +7,7 @@
 //
 
 #import "GameViewController.h"
-#import "THTitleScene.h"
+#import "TitleScene.h"
 
 @implementation GameViewController
 
@@ -15,7 +15,7 @@
     [super viewDidLayoutSubviews];
     
     // Load the SKScene from 'GameScene.sks'
-    SKScene * scene = [TitleScene nodeWithFileNamed:@"THTitleScene.sks"];
+    SKScene * scene = [TitleScene nodeWithFileNamed:@"TitleScene.sks"];
     
     // Set the scale mode to scale to fit the window
     scene.scaleMode = SKSceneScaleModeAspectFill;

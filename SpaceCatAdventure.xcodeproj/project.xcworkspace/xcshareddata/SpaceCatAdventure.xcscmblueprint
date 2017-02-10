@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E56788090D08351D7AF7120372567DF600167C7F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E56788090D08351D7AF7120372567DF600167C7F" : 9223372036854775807,
+    "9E65DC655C0CE3D1B4BA1D38FA3D0D39788D5DDC" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "6CC8876C-9EE8-4DBC-8B74-A4275EE09F2F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E56788090D08351D7AF7120372567DF600167C7F" : "SpaceCatAdventure\/",
+    "9E65DC655C0CE3D1B4BA1D38FA3D0D39788D5DDC" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SpaceCatAdventure",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SpaceCatAdventure.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/alemak1\/InteractiveStoryApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9E65DC655C0CE3D1B4BA1D38FA3D0D39788D5DDC"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/alemak1\/SpaceCat.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E56788090D08351D7AF7120372567DF600167C7F"
+    }
+  ]
+}
