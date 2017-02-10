@@ -15,6 +15,7 @@
 #import "Projectile.h"
 #import "SpaceDog.h"
 #import "Ground.h"
+#import "Util.h"
 
 @implementation GamePlayScene
 
@@ -40,6 +41,7 @@
     [self addSpaceDog];
     
     self.physicsWorld.gravity = CGVectorMake(0, -9.8);
+    self.physicsWorld.contactDelegate = self;
     
     Ground* ground = [Ground groundWithSize:CGSizeMake(self.frame.size.width, 22)];
     [self addChild:ground];
@@ -107,6 +109,33 @@
     // Called before each frame is rendered
 }
 
-
+-(void) didBeginContact:(SKPhysicsContact *)contact{
+    SKPhysicsBody* firstBody, *secondBody;
+    
+    if(contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask){
+        firstBody = contact.bodyA;
+        secondBody = contact.bodyB;
+    } else {
+        firstBody = contact.bodyB;
+        secondBody = contact.bodyA;
+    }
+    
+    
+    if (firstBody.categoryBitMask == CollisionCategoryEnemy && secondBody.categoryBitMask == CollisionCategoryProjectile){
+        NSLog(@"BAM");
+        SpaceDog* spaceDog = (SpaceDog*) firstBody.node;
+        Projectile* projectile = (Projectile*) secondBody.node;
+        
+        [spaceDog removeFromParent];
+        [projectile removeFromParent];
+        
+    } else if (firstBody.categoryBitMask == CollisionCategoryEnemy && secondBody.categoryBitMask == CollisionCategoryGround){
+        NSLog(@"Hit ground");
+        
+        SpaceDog* spaceDog = (SpaceDog*) firstBody.node;
+        
+        [spaceDog removeFromParent];
+    }
+}
 
 @end

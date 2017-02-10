@@ -46,7 +46,7 @@
 - (void) setupPhysicsBody{
     self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.frame.size];
     self.physicsBody.affectedByGravity = NO;
-    self.physicsBody.velocity = CGVectorMake(0, -50);
+    self.physicsBody.velocity = CGVectorMake(0, -180);
     
     self.physicsBody.categoryBitMask = CollisionCategoryEnemy;
     self.physicsBody.collisionBitMask = 0;
