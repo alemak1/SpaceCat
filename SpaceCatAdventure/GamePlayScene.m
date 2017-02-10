@@ -39,7 +39,7 @@
 
     [self addSpaceDog];
     
-    self.physicsWorld.gravity = CGVectorMake(0, 9.8);
+    self.physicsWorld.gravity = CGVectorMake(0, -9.8);
     
     Ground* ground = [Ground groundWithSize:CGSizeMake(self.frame.size.width, 22)];
     [self addChild:ground];
@@ -50,11 +50,11 @@
 
 - (void) addSpaceDog{
     SpaceDog* spaceDogA = [SpaceDog spaceDogOfType:SpaceDogTypeA];
-    spaceDogA.position = CGPointMake(100, 100);
+    spaceDogA.position = CGPointMake(100, 1000);
     [self addChild: spaceDogA];
     
     SpaceDog* spaceDogB = [SpaceDog spaceDogOfType:SpaceDogTypeB];
-    spaceDogB.position = CGPointMake(200, 200);
+    spaceDogB.position = CGPointMake(200, 1000);
     [self addChild:spaceDogB];
 }
 

@@ -33,7 +33,8 @@
     projectile.xScale = 1.4;
     projectile.name = @"Projectile";
     [projectile setupAnimation];
-    
+    [projectile setupPhysicsBody];
+
     return projectile;
 }
 
@@ -76,6 +77,11 @@
     
     [self runAction: actionGroup];
     
+}
+
+- (void) setupPhysicsBody{
+    self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.frame.size];
+    self.physicsBody.affectedByGravity = NO;
 }
 
 @end
