@@ -17,10 +17,22 @@
 #import "Ground.h"
 #import "Util.h"
 
+
+@interface GamePlayScene ()
+
+@property (nonatomic) NSTimeInterval lastUpdateTimeInterval;
+@property (nonatomic) NSTimeInterval timeSinceEnemyAdded;
+
+@end
+
+
 @implementation GamePlayScene
 
 
 - (void) didMoveToView:(SKView *)view{
+    
+    self.lastUpdateTimeInterval = 0;
+    self.timeSinceEnemyAdded = 0;
     
     SKTexture* backgroundTexture = [SKTexture textureWithImageNamed:@"background_1"];
     SKNode* background = [SKSpriteNode spriteNodeWithTexture: backgroundTexture];
@@ -38,7 +50,6 @@
     
     [self addChild: spaceCat];
 
-    [self addSpaceDog];
     
     self.physicsWorld.gravity = CGVectorMake(0, -9.8);
     self.physicsWorld.contactDelegate = self;
@@ -56,7 +67,7 @@
     SpaceDog* spaceDog = [SpaceDog spaceDogOfType:randomSpaceDog];
     float y = self.frame.size.height + spaceDog.size.height;
     float x = [Util randomWithMin:10+spaceDog.size.width
-                              max:self.frame.size.width-10];
+                              max:self.frame.size.width-spaceDog.size.width-10];
     
     spaceDog.position = CGPointMake(x, y);
     [self addChild:spaceDog];
@@ -109,6 +120,17 @@
 
 -(void)update:(CFTimeInterval)currentTime {
     // Called before each frame is rendered
+    if(self.lastUpdateTimeInterval){
+        self.timeSinceEnemyAdded += currentTime - self.lastUpdateTimeInterval;
+    }
+    
+    if(self.timeSinceEnemyAdded > 1.5){
+        [self addSpaceDog];
+        
+        self.timeSinceEnemyAdded = 0;
+    }
+
+    self.lastUpdateTimeInterval = currentTime;
 }
 
 -(void) didBeginContact:(SKPhysicsContact *)contact{
