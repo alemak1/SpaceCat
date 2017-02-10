@@ -1,20 +1,19 @@
 //
-//  Util.h
+//  SpaceDog.h
 //  SpaceCatAdventure
 //
 //  Created by Aleksander Makedonski on 2/10/17.
 //  Copyright © 2017 Changzhou Panda. All rights reserved.
 //
 
-#ifndef Util_h
-#define Util_h
+#ifndef SpaceDog_h
+#define SpaceDog_h
 
+#import <SpriteKit/SpriteKit.h>
 #import <Foundation/Foundation.h>
 
-static const int PROJECTILE_SPEED = 400;
+@interface SpaceDog : SKSpriteNode
 
-@interface Util : NSObject
-
++ (instancetype) spaceDogOfType: 
 @end
-
-#endif /* Util_h */
+#endif /* SpaceDog_h */

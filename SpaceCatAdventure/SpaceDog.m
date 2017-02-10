@@ -1,20 +1,17 @@
 //
-//  Util.h
+//  SpaceDog.m
 //  SpaceCatAdventure
 //
 //  Created by Aleksander Makedonski on 2/10/17.
 //  Copyright © 2017 Changzhou Panda. All rights reserved.
 //
 
-#ifndef Util_h
-#define Util_h
-
 #import <Foundation/Foundation.h>
+#import "SpaceDog.h"
 
-static const int PROJECTILE_SPEED = 400;
 
-@interface Util : NSObject
+@implementation SpaceDog
+
+
 
 @end
-
-#endif /* Util_h */
