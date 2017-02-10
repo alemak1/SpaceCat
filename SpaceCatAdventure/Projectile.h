@@ -12,4 +12,8 @@
 
 + (instancetype) projectileAtPosition: (CGPoint)position;
 
+- (void) setupAnimation;
+
 @end
+
+
