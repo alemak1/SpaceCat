@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BD78CF241E4D702F00D7CB3F /* GamePlayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BD78CF231E4D702F00D7CB3F /* GamePlayScene.m */; };
-		BD78CF291E4D7B3200D7CB3F /* Sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BD78CF281E4D7B3200D7CB3F /* Sprites.atlas */; };
+		BD78CF2B1E4D7C3400D7CB3F /* Sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BD78CF2A1E4D7C3400D7CB3F /* Sprites.atlas */; };
 		BDE039DE1E4CBF4400EF037D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE039DD1E4CBF4400EF037D /* main.m */; };
 		BDE039E11E4CBF4400EF037D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE039E01E4CBF4400EF037D /* AppDelegate.m */; };
 		BDE039E31E4CBF4400EF037D /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = BDE039E21E4CBF4400EF037D /* GameScene.sks */; };
@@ -24,7 +24,7 @@
 /* Begin PBXFileReference section */
 		BD78CF231E4D702F00D7CB3F /* GamePlayScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamePlayScene.m; sourceTree = "<group>"; };
 		BD78CF251E4D705E00D7CB3F /* GamePlayScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GamePlayScene.h; sourceTree = "<group>"; };
-		BD78CF281E4D7B3200D7CB3F /* Sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = Sprites.atlas; path = "../../../../Downloads/SpaceCat-Assets/Sprites.atlas"; sourceTree = "<group>"; };
+		BD78CF2A1E4D7C3400D7CB3F /* Sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Sprites.atlas; sourceTree = "<group>"; };
 		BDE039D91E4CBF4400EF037D /* SpaceCatAdventure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceCatAdventure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDE039DD1E4CBF4400EF037D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BDE039DF1E4CBF4400EF037D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 		BDE039DB1E4CBF4400EF037D /* SpaceCatAdventure */ = {
 			isa = PBXGroup;
 			children = (
-				BD78CF281E4D7B3200D7CB3F /* Sprites.atlas */,
+				BD78CF2A1E4D7C3400D7CB3F /* Sprites.atlas */,
 				BDE03A001E4CC48200EF037D /* TitleScene.h */,
 				BDE03A011E4CCBD000EF037D /* TitleScene.sks */,
 				BDE039FE1E4CC45400EF037D /* TitleScene.m */,
@@ -160,7 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDE039EE1E4CBF4400EF037D /* Main.storyboard in Resources */,
-				BD78CF291E4D7B3200D7CB3F /* Sprites.atlas in Resources */,
+				BD78CF2B1E4D7C3400D7CB3F /* Sprites.atlas in Resources */,
 				BDE039E31E4CBF4400EF037D /* GameScene.sks in Resources */,
 				BDE039F01E4CBF4400EF037D /* Assets.xcassets in Resources */,
 				BDE03A021E4CCBD000EF037D /* TitleScene.sks in Resources */,

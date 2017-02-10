@@ -20,10 +20,15 @@
     
     background.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
     background.xScale = 1.4;
-    background.yScale = 5;
+    background.yScale = 4;
     
     [self addChild: background];
     
+    SKSpriteNode* machine = [SKSpriteNode spriteNodeWithImageNamed:@"machine_1"];
+    machine.position = CGPointMake(CGRectGetMidX(self.frame), 60);
+    machine.anchorPoint = CGPointMake(.5, 0);
+    
+    [self addChild:machine];
 
     
 }
