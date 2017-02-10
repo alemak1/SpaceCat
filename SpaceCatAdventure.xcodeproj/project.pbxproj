@@ -10,6 +10,7 @@
 		BD78CF241E4D702F00D7CB3F /* GamePlayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BD78CF231E4D702F00D7CB3F /* GamePlayScene.m */; };
 		BD78CF2B1E4D7C3400D7CB3F /* Sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BD78CF2A1E4D7C3400D7CB3F /* Sprites.atlas */; };
 		BD78CF2D1E4D81FD00D7CB3F /* MachineNode.m in Sources */ = {isa = PBXBuildFile; fileRef = BD78CF2C1E4D81FD00D7CB3F /* MachineNode.m */; };
+		BD78CF301E4D864F00D7CB3F /* SpaceCat.m in Sources */ = {isa = PBXBuildFile; fileRef = BD78CF2F1E4D864F00D7CB3F /* SpaceCat.m */; };
 		BDE039DE1E4CBF4400EF037D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE039DD1E4CBF4400EF037D /* main.m */; };
 		BDE039E11E4CBF4400EF037D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE039E01E4CBF4400EF037D /* AppDelegate.m */; };
 		BDE039E31E4CBF4400EF037D /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = BDE039E21E4CBF4400EF037D /* GameScene.sks */; };
@@ -28,6 +29,8 @@
 		BD78CF2A1E4D7C3400D7CB3F /* Sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Sprites.atlas; sourceTree = "<group>"; };
 		BD78CF2C1E4D81FD00D7CB3F /* MachineNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MachineNode.m; sourceTree = "<group>"; };
 		BD78CF2E1E4D821000D7CB3F /* MachineNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MachineNode.h; sourceTree = "<group>"; };
+		BD78CF2F1E4D864F00D7CB3F /* SpaceCat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaceCat.m; sourceTree = "<group>"; };
+		BD78CF311E4D866D00D7CB3F /* SpaceCat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpaceCat.h; sourceTree = "<group>"; };
 		BDE039D91E4CBF4400EF037D /* SpaceCatAdventure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceCatAdventure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDE039DD1E4CBF4400EF037D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BDE039DF1E4CBF4400EF037D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -85,8 +88,10 @@
 				BDE039E41E4CBF4400EF037D /* Actions.sks */,
 				BDE039EC1E4CBF4400EF037D /* Main.storyboard */,
 				BDE039DD1E4CBF4400EF037D /* main.m */,
-				BD78CF2C1E4D81FD00D7CB3F /* MachineNode.m */,
 				BD78CF2E1E4D821000D7CB3F /* MachineNode.h */,
+				BD78CF2C1E4D81FD00D7CB3F /* MachineNode.m */,
+				BD78CF311E4D866D00D7CB3F /* SpaceCat.h */,
+				BD78CF2F1E4D864F00D7CB3F /* SpaceCat.m */,
 				BDE039EF1E4CBF4400EF037D /* Assets.xcassets */,
 				BDE039F11E4CBF4400EF037D /* LaunchScreen.storyboard */,
 				BDE039F41E4CBF4400EF037D /* Info.plist */,
@@ -182,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDE039EB1E4CBF4400EF037D /* GameViewController.m in Sources */,
+				BD78CF301E4D864F00D7CB3F /* SpaceCat.m in Sources */,
 				BDE039E11E4CBF4400EF037D /* AppDelegate.m in Sources */,
 				BD78CF241E4D702F00D7CB3F /* GamePlayScene.m in Sources */,
 				BDE039DE1E4CBF4400EF037D /* main.m in Sources */,

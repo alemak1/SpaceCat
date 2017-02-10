@@ -10,6 +10,7 @@
 #import <SpriteKit/SpriteKit.h>
 #import "GamePlayScene.h"
 #import "MachineNode.h"
+#import "SpaceCat.h"
 
 @implementation GamePlayScene
 
@@ -27,6 +28,10 @@
     
     MachineNode* machine = [MachineNode machineAtPosition:CGPointMake(CGRectGetMidX(self.frame), 60)];
     [self addChild:machine];
+    
+    SpaceCat* spaceCat = [SpaceCat spaceCatAtPosition:CGPointMake(machine.position.x, machine.position.y-2)];
+    
+    [self addChild: spaceCat];
 
     
 }
