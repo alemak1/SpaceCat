@@ -13,7 +13,16 @@
 @implementation SpaceDog
 
 + (instancetype) spaceDogOfType: (SpaceDogType)type{
+    SpaceDog* spaceDog;
     
+    if(type == SpaceDogTypeA){
+        spaceDog = [self spriteNodeWithImageNamed:@"spacedog_A_1"];
+    } else {
+        spaceDog = [self spriteNodeWithImageNamed:@"spacedog_B_1"];
+    }
+    
+    
+    return spaceDog;
 }
 
 
