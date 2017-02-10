@@ -51,13 +51,15 @@
 
 
 - (void) addSpaceDog{
-    SpaceDog* spaceDogA = [SpaceDog spaceDogOfType:SpaceDogTypeA];
-    spaceDogA.position = CGPointMake(100, 1000);
-    [self addChild: spaceDogA];
+    NSUInteger randomSpaceDog = [Util randomWithMin:0 max:2];
     
-    SpaceDog* spaceDogB = [SpaceDog spaceDogOfType:SpaceDogTypeB];
-    spaceDogB.position = CGPointMake(200, 1000);
-    [self addChild:spaceDogB];
+    SpaceDog* spaceDog = [SpaceDog spaceDogOfType:randomSpaceDog];
+    float y = self.frame.size.height + spaceDog.size.height;
+    float x = [Util randomWithMin:10+spaceDog.size.width
+                              max:self.frame.size.width-10];
+    
+    spaceDog.position = CGPointMake(x, y);
+    [self addChild:spaceDog];
 }
 
 
