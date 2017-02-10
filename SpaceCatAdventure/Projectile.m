@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Projectile.h"
-
+#import "Constants.h"
 
 @implementation Projectile
 
@@ -64,7 +64,7 @@
     
     //time = distance / speed
     
-    float time = distanceC / 500;
+    float time = distanceC / PROJECTILE_SPEED;
     
     
     SKAction* moveProjectile = [SKAction moveTo:pointOffScreen duration:time];
