@@ -12,6 +12,8 @@
 
 + (instancetype) projectileAtPosition: (CGPoint)position;
 
+- (void) moveTowardsPosition: (CGPoint)position;
+
 - (void) setupAnimation;
 
 @end

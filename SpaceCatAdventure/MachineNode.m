@@ -17,6 +17,7 @@
     machine.anchorPoint = CGPointMake(.5, 0);
     machine.yScale = 4;
     machine.xScale = 1.4;
+    machine.name = @"Machine";
 
     NSArray* textures = @[[SKTexture textureWithImageNamed:@"machine_1"], [SKTexture textureWithImageNamed:@"machine_2"]];
     

@@ -37,6 +37,39 @@
     return projectile;
 }
 
-
+- (void) moveTowardsPosition: (CGPoint) position{
+    //slope = (Y3 - Y1) / (X3 - X1)
+    float slope = (position.y - self.position.y)/ (position.x - self.position.x);
+    
+    //slope = (Y2 - Y1) / (X2 - X1)
+    // Y2 - Y1 = slope * (X2 - X1)
+    // Y2 = slope*X2 - slope*X1 + Y1
+    
+    float offScreenX;
+    
+    if (position.x <= self.position.x){
+        offScreenX = -10;
+    } else {
+        offScreenX = self.parent.frame.size.width + 10;
+    }
+    
+    float offScreenY = slope*offScreenX - slope*self.position.x + self.position.y;
+    
+    CGPoint pointOffScreen = CGPointMake(offScreenX, offScreenY);
+    
+    float distanceA = pointOffScreen.y - self.position.y;
+    float distanceB = pointOffScreen.x - self.position.x;
+    
+    float distanceC = sqrtf(powf(distanceA, 2) + powf(distanceB, 2));
+    
+    //time = distance / speed
+    
+    float time = distanceC / 500;
+    
+    
+    SKAction* moveProjectile = [SKAction moveTo:pointOffScreen duration:time];
+    [self runAction: moveProjectile];
+    
+}
 
 @end

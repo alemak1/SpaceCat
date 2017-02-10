@@ -79,8 +79,11 @@
     SpaceCat* spaceCat = (SpaceCat*)[self childNodeWithName:@"SpaceCat"];
     [spaceCat performTap];
     
-    Projectile* projectile = [Projectile projectileAtPosition:position];
+    MachineNode* machine = (MachineNode*) [self childNodeWithName:@"Machine"];
+    
+    Projectile* projectile = [Projectile projectileAtPosition:CGPointMake(machine.position.x, machine.position.y + machine.frame.size.height-15)];
     [self addChild:projectile];
+    [projectile moveTowardsPosition:position];
 }
 
 -(void)update:(CFTimeInterval)currentTime {
