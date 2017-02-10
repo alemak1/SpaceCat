@@ -16,7 +16,7 @@
 #import "SpaceDog.h"
 #import "Ground.h"
 #import "Util.h"
-
+#import <AVFoundation/AVFoundation.h>
 
 @interface GamePlayScene ()
 
@@ -25,7 +25,7 @@
 @property (nonatomic) NSTimeInterval totalGameTime;
 @property (nonatomic) NSInteger minSpeed;
 @property (nonatomic) NSTimeInterval addEnemyTimeInterval;
-
+@property (nonatomic) AVAudioPlayer* backgroundMusic;
 
 @property (nonatomic) SKAction* damageSFX;
 @property (nonatomic) SKAction* explodeSFX;
@@ -38,6 +38,10 @@
 
 
 - (void) didMoveToView:(SKView *)view{
+    
+    [self setUpSounds];
+
+    [self.backgroundMusic play];
     
     self.lastUpdateTimeInterval = 0;
     self.timeSinceEnemyAdded = 0;
@@ -68,12 +72,17 @@
     Ground* ground = [Ground groundWithSize:CGSizeMake(self.frame.size.width, 22)];
     [self addChild:ground];
     
-    [self setUpSounds];
     
 }
 
 
 - (void) setUpSounds{
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"Gameplay" withExtension:@"mp3"];
+    self.backgroundMusic = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+    
+    self.backgroundMusic.numberOfLoops = -1;
+    [self.backgroundMusic prepareToPlay];
+    
     self.damageSFX = [SKAction playSoundFileNamed:@"Damage.caf" waitForCompletion:NO];
     self.explodeSFX = [SKAction playSoundFileNamed:@"Explode.caf" waitForCompletion:NO];
     self.laserSFX = [SKAction playSoundFileNamed:@"Laser.caf" waitForCompletion:NO];

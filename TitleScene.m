@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <SpriteKit/SpriteKit.h>
+#import <AVFoundation/AVFoundation.h>
 
 #import "TitleScene.h"
 #import "GamePlayScene.h"
@@ -15,11 +16,21 @@
 @interface TitleScene ()
 
 @property (nonatomic) SKAction* pressStartSFX;
+@property (nonatomic) AVAudioPlayer *backgroundMusic;
+
 @end
 
 @implementation TitleScene
 
 - (void) didMoveToView:(SKView *)view{
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"StartScreen" withExtension:@"mp3"];
+    self.pressStartSFX = [SKAction playSoundFileNamed:@"PressStart.caf" waitForCompletion:NO];
+    self.backgroundMusic = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+
+    self.backgroundMusic.numberOfLoops = -1;
+    [self.backgroundMusic prepareToPlay];
+    [self.backgroundMusic play];
+    
     SKNode* background = [SKSpriteNode spriteNodeWithImageNamed:@"splash_1"];
     
     background.xScale = 1.5;
@@ -28,8 +39,7 @@
     [self addChild: background];
     
     
-    self.pressStartSFX = [SKAction playSoundFileNamed:@"PressStart.caf" waitForCompletion:NO];
-    
+
 
 }
 
