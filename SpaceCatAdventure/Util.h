@@ -12,8 +12,8 @@
 #import <Foundation/Foundation.h>
 
 static const int PROJECTILE_SPEED = 400;
-static const int SpaceDogMinSpeed = -100;
-static const int SpaceDogMaxSpeed = -500;
+static const int SpaceDogMinSpeed = -110;
+static const int SpaceDogMaxSpeed = -100;
 
 typedef NS_OPTIONS(uint32_t, CollisionCategory){
     CollisionCategoryEnemy          = 1 << 0,           //0000
