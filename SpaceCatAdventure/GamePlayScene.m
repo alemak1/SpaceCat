@@ -80,7 +80,7 @@
     [spaceCat performTap];
     
     MachineNode* machine = (MachineNode*) [self childNodeWithName:@"Machine"];
-    
+    NSLog(@"The machine is at postion x: %f, y: %f",machine.position.x,machine.position.y);
     Projectile* projectile = [Projectile projectileAtPosition:CGPointMake(machine.position.x, machine.position.y + machine.frame.size.height-15)];
     [self addChild:projectile];
     [projectile moveTowardsPosition:position];
@@ -88,7 +88,6 @@
 
 -(void)update:(CFTimeInterval)currentTime {
     // Called before each frame is rendered
-    NSLog(@"%f",fmod(currentTime, 60));
 }
 
 
