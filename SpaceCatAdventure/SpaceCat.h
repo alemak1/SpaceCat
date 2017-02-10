@@ -12,4 +12,6 @@
 
 + (instancetype) spaceCatAtPosition: (CGPoint)position;
 
+- (void) performTap;
+
 @end

@@ -55,6 +55,9 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     // Run 'Pulse' action from 'Actions.sks'
    
+    SpaceCat* spaceCat = (SpaceCat*)[self childNodeWithName:@"SpaceCat"];
+    [spaceCat performTap];
+    
     //    for (UITouch *t in touches) {[self touchDownAtPoint:[t locationInNode:self]];}
 }
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{

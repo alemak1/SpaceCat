@@ -9,6 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "SpaceCat.h"
 
+@interface SpaceCat ()
+
+@property (nonatomic) SKAction* tapAction;
+
+@end
+
 @implementation SpaceCat
 
 + (instancetype) spaceCatAtPosition: (CGPoint)position{
@@ -17,16 +23,26 @@
     spaceCat.xScale = 1.4;
     spaceCat.anchorPoint = CGPointMake(0.5, 0);
     spaceCat.position = position;
-    
-    SKAction* spaceCatAction = [SKAction animateWithTextures: @[
-                                [SKTexture textureWithImageNamed:@"spacecat_1"],
-                                [SKTexture textureWithImageNamed:@"spacecat_2"]]
-                            timePerFrame:0.1];
-    
-    SKAction * repeatAction = [SKAction repeatActionForever:spaceCatAction];
-    [spaceCat runAction:repeatAction];
-    
+    spaceCat.name = @"SpaceCat";
+   
     return spaceCat;
+}
+
+- (void) performTap{
+    [self runAction:self.tapAction];
+}
+
+- (SKAction*) tapAction{
+    if( _tapAction != nil){
+        return _tapAction;
+    }
+    
+    NSArray* textures = @[[SKTexture textureWithImageNamed:@"spacecat_2"],
+                          [SKTexture textureWithImageNamed:@"spacecat_1"]];
+    
+    _tapAction = [SKAction animateWithTextures:textures timePerFrame:0.1];
+    
+    return _tapAction;
 }
 
 
