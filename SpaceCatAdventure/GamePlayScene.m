@@ -136,6 +136,39 @@
         
         [spaceDog removeFromParent];
     }
+    
+    [self createDebrisAtPosition: contact.contactPoint];
+
+}
+
+- (void) createDebrisAtPosition: (CGPoint)position{
+    NSInteger numberOfPieces = [Util randomWithMin:5 max:20];
+    
+    NSString* imageName;
+    
+    for (int i = 0; i < numberOfPieces; i++) {
+        NSInteger randomPiece = [Util randomWithMin:1 max:4];
+        NSString* imageName = [NSString stringWithFormat:@"debri_%d",randomPiece];
+        
+        SKSpriteNode* debris = [SKSpriteNode spriteNodeWithImageNamed:imageName];
+        debris.position = position;
+        [self addChild:debris];
+        
+        debris.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:debris.frame.size];
+        debris.physicsBody.categoryBitMask = CollisionCategoryDebris;
+        debris.physicsBody.contactTestBitMask = 0;
+        debris.physicsBody.collisionBitMask = CollisionCategoryGround | CollisionCategoryDebris;
+        
+        debris.name = @"Debris";
+        debris.physicsBody.velocity = CGVectorMake(
+                                                   [Util randomWithMin:-150 max:150],
+                                                   [Util randomWithMin:150 max:350]);
+        
+        [debris runAction:[SKAction waitForDuration:2.0] completion: ^{
+            [debris removeFromParent];
+        }];
+        
+    }
 }
 
 @end

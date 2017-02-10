@@ -24,6 +24,8 @@ typedef NS_OPTIONS(uint32_t, CollisionCategory){
 
 @interface Util : NSObject
 
++ (NSInteger) randomWithMin: (NSInteger)min max:(NSInteger)max;
+
 @end
 
 #endif /* Util_h */
