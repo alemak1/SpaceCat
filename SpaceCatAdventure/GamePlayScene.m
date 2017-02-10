@@ -27,7 +27,8 @@
     SKSpriteNode* machine = [SKSpriteNode spriteNodeWithImageNamed:@"machine_1"];
     machine.position = CGPointMake(CGRectGetMidX(self.frame), 60);
     machine.anchorPoint = CGPointMake(.5, 0);
-    
+    machine.yScale = 4;
+    machine.xScale = 1.4;
     [self addChild:machine];
 
     
