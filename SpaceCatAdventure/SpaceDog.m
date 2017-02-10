@@ -12,6 +12,9 @@
 
 @implementation SpaceDog
 
++ (instancetype) spaceDogOfType: (SpaceDogType)type{
+    
+}
 
 
 @end
