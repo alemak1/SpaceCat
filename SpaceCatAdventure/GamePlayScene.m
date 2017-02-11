@@ -72,6 +72,11 @@
     Ground* ground = [Ground groundWithSize:CGSizeMake(self.frame.size.width, 22)];
     [self addChild:ground];
     
+    HUDNode* hudNode = [HUDNode hudAtPosition:CGPointMake(0, self.frame.size.height-30) inFrame: self.frame];
+    hudNode.xScale = 1.4;
+    hudNode.yScale = 5;
+    [self addChild:hudNode];
+    
     
 }
 

@@ -7,6 +7,7 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "HUDNode.h"
 
 @interface GamePlayScene : SKScene<SKPhysicsContactDelegate>
 
