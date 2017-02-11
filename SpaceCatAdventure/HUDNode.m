@@ -15,8 +15,8 @@
     HUDNode * hudNode = [self node];
     hudNode.position = position;
     hudNode.zPosition = 10;
-    
-    
+    hudNode.name = @"HUD";
+
     SKSpriteNode *catHead = [SKSpriteNode spriteNodeWithImageNamed:@"HUD_cat_1"];
     catHead.position = CGPointMake(40, -10);
     
@@ -61,6 +61,10 @@
     scoreLabel.text = [NSString stringWithFormat:@"%d",self.score];
     
 }
+- (BOOL) loseLife{
+    return YES;
+}
+
 
 
 @end

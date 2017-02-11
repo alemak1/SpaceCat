@@ -21,6 +21,7 @@
 + (instancetype) hudAtPosition: (CGPoint)position inFrame: (CGRect)frame;
 
 - (void) addPoints: (NSInteger) points;
+- (BOOL) loseLife;
 
 @end
 

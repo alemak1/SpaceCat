@@ -211,6 +211,7 @@
         SpaceDog* spaceDog = (SpaceDog*) firstBody.node;
         Projectile* projectile = (Projectile*) secondBody.node;
         
+        [self addPoints: PointsPerHit];
         
         if( [spaceDog isDamaged]) {
             [spaceDog removeFromParent];
@@ -232,6 +233,11 @@
     }
     
 
+}
+
+- (void) addPoints:(NSInteger)points{
+    HUDNode * hudNode = (HUDNode*)[self childNodeWithName:@"HUD"];
+    [hudNode addPoints:points];
 }
 
 - (void) createDebrisAtPosition: (CGPoint)position{
