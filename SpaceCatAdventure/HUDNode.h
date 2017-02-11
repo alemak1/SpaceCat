@@ -20,6 +20,8 @@
 
 + (instancetype) hudAtPosition: (CGPoint)position inFrame: (CGRect)frame;
 
+- (void) addPoints: (NSInteger) points;
+
 @end
 
 #endif /* HUDNode_h */

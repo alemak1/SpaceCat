@@ -54,4 +54,13 @@
 
 }
 
+- (void) addPoints: (NSInteger) points{
+    self.score += points;
+    
+    SKLabelNode* scoreLabel = (SKLabelNode*)[self childNodeWithName:@"Score"];
+    scoreLabel.text = [NSString stringWithFormat:@"%d",self.score];
+    
+}
+
+
 @end
