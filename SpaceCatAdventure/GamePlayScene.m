@@ -262,6 +262,8 @@
     
     SKEmitterNode* explosion = [NSKeyedUnarchiver unarchiveObjectWithFile:explosionPath];
     explosion.position = position;
+    explosion.xScale = 1.4;
+    explosion.yScale = 5;
     [self addChild:explosion];
     
     [explosion runAction:[SKAction waitForDuration:2.0] completion:^{
