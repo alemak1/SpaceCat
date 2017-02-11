@@ -17,6 +17,8 @@
 		BD5A6CF41E4DF81900ACDB87 /* GameOver.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BD5A6CF11E4DF81900ACDB87 /* GameOver.mp3 */; };
 		BD5A6CF51E4DF81900ACDB87 /* Gameplay.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BD5A6CF21E4DF81900ACDB87 /* Gameplay.mp3 */; };
 		BD5A6CF61E4DF81900ACDB87 /* StartScreen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BD5A6CF31E4DF81900ACDB87 /* StartScreen.mp3 */; };
+		BD77B8711E4EC19E0045224F /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = BD77B86F1E4EC19E0045224F /* Explosion.sks */; };
+		BD77B8721E4EC19E0045224F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD77B8701E4EC19E0045224F /* Assets.xcassets */; };
 		BD78CF241E4D702F00D7CB3F /* GamePlayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BD78CF231E4D702F00D7CB3F /* GamePlayScene.m */; };
 		BD78CF2B1E4D7C3400D7CB3F /* Sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = BD78CF2A1E4D7C3400D7CB3F /* Sprites.atlas */; };
 		BD78CF2D1E4D81FD00D7CB3F /* MachineNode.m in Sources */ = {isa = PBXBuildFile; fileRef = BD78CF2C1E4D81FD00D7CB3F /* MachineNode.m */; };
@@ -47,6 +49,8 @@
 		BD5A6CF11E4DF81900ACDB87 /* GameOver.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = GameOver.mp3; sourceTree = "<group>"; };
 		BD5A6CF21E4DF81900ACDB87 /* Gameplay.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Gameplay.mp3; sourceTree = "<group>"; };
 		BD5A6CF31E4DF81900ACDB87 /* StartScreen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = StartScreen.mp3; sourceTree = "<group>"; };
+		BD77B86F1E4EC19E0045224F /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = Explosion.sks; path = ../Explosion.sks; sourceTree = "<group>"; };
+		BD77B8701E4EC19E0045224F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		BD78CF231E4D702F00D7CB3F /* GamePlayScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamePlayScene.m; sourceTree = "<group>"; };
 		BD78CF251E4D705E00D7CB3F /* GamePlayScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GamePlayScene.h; sourceTree = "<group>"; };
 		BD78CF2A1E4D7C3400D7CB3F /* Sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Sprites.atlas; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 		BDE039DB1E4CBF4400EF037D /* SpaceCatAdventure */ = {
 			isa = PBXGroup;
 			children = (
+				BD77B8701E4EC19E0045224F /* Assets.xcassets */,
+				BD77B86F1E4EC19E0045224F /* Explosion.sks */,
 				BD5A6CE11E4DF3B600ACDB87 /* Sounds */,
 				BD78CF2A1E4D7C3400D7CB3F /* Sprites.atlas */,
 				BDE03A001E4CC48200EF037D /* TitleScene.h */,
@@ -232,6 +238,7 @@
 			files = (
 				BD5A6CF51E4DF81900ACDB87 /* Gameplay.mp3 in Resources */,
 				BDE039EE1E4CBF4400EF037D /* Main.storyboard in Resources */,
+				BD77B8711E4EC19E0045224F /* Explosion.sks in Resources */,
 				BD5A6CEB1E4DF48500ACDB87 /* Explode.caf in Resources */,
 				BD5A6CEA1E4DF48500ACDB87 /* Damage.caf in Resources */,
 				BD78CF2B1E4D7C3400D7CB3F /* Sprites.atlas in Resources */,
@@ -243,6 +250,7 @@
 				BDE039F01E4CBF4400EF037D /* Assets.xcassets in Resources */,
 				BDE03A021E4CCBD000EF037D /* TitleScene.sks in Resources */,
 				BDE039F31E4CBF4400EF037D /* LaunchScreen.storyboard in Resources */,
+				BD77B8721E4EC19E0045224F /* Assets.xcassets in Resources */,
 				BDE039E51E4CBF4400EF037D /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

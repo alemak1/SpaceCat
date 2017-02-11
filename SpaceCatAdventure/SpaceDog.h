@@ -23,5 +23,8 @@ typedef NS_ENUM(NSUInteger,SpaceDogType){
 
 + (instancetype) spaceDogOfType: (SpaceDogType)type;
 
+@property (nonatomic, getter = isDamaged) BOOL damaged;
+@property (nonatomic) SpaceDogType type;
+
 @end
 #endif /* SpaceDog_h */
